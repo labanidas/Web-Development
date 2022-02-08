@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+    background:dimgray
+   
+}
+#datetime{
+    border:1px solid black;
+    height:auto;
+    width:auto;
+    background:darkslategrey;
+    border:3px solid cyan;
+    padding:25px;
+    color:white;
+    border-radius:6px;
+    letter-spacing:3px;
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    transition:2s;
+    transition-property:background, box-sizing;
+
+}
+#date{
+    display:flex;
+    
+    font-size:20px;
+    justify-content:center;
+    padding:10px 0;
+
+}
+#time{
+    display:flex;
+    letter-spacing:3px;
+    font-size:70px;
+    justify-content:center;
+ 
+}
+#datetime:hover{
+    background:cyan;
+    box-shadow:0 0 10px cyan;
+}
+    </style>   
+    <title>Digital clock</title>
+
+</head>
+<body>
+    <div id="datetime">
+        <div id="date">
+            <span id="child1"></span>
+        </div>
+        <div id="time">
+            <span id="child2"></span>
+            
+        </div>
+    </div>
+    
+</body>
+<script>
+    
+function clock(){
+
+a=new Date();
+const month=
+[
+    'January','February','March','April','May','June','July','August','September','October','November','December'
+]
+const da= ['Monday','Tuesday','Wednesday','Thursday','Friday','SAturday']
+
+let d=da[a.getDay()]+", "+a.getDate()+' '+month[a.getMonth()]+' '+a.getFullYear();
+let time=a.getHours()+" : "+a.getMinutes()+" : "+a.getSeconds();
+document.getElementById("child1").innerHTML = d;
+document.getElementById("child2").innerHTML = time ;
+
+}
+
+setInterval(clock, 1000);
+</script>
+</html>
