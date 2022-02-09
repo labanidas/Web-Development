@@ -35,7 +35,7 @@ body{
 #date{
     display:flex;
     
-    font-size:20px;
+    font-size:3vh;
     justify-content:center;
     padding:10px 0;
 
@@ -43,7 +43,7 @@ body{
 #time{
     display:flex;
     letter-spacing:3px;
-    font-size:70px;
+    font-size:10vh;
     justify-content:center;
  
 }
@@ -76,12 +76,12 @@ const month=
 [
     'January','February','March','April','May','June','July','August','September','October','November','December'
 ]
-const da= ['Monday','Tuesday','Wednesday','Thursday','Friday','SAturday']
-
+const da= ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','SAturday']
 let d=da[a.getDay()]+", "+a.getDate()+' '+month[a.getMonth()]+' '+a.getFullYear();
-let time=a.getHours()+" : "+a.getMinutes()+" : "+a.getSeconds();
+
+let time=a.toLocaleString("en-Us", { hour: 'numeric', minute: 'numeric', second: 'numeric' , hour12: true } );
 document.getElementById("child1").innerHTML = d;
-document.getElementById("child2").innerHTML = time ;
+document.getElementById("child2").innerHTML = time;
 
 }
 
