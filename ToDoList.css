@@ -1,0 +1,81 @@
+*{
+    box-sizing:border-box;
+    font-size:20px;
+
+}
+body{
+    background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/2560x1600-Pink-Flowers-Wallpaper.jpg");
+    height:80vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#container{
+    border:1px solid white;
+    box-sizing:content-box;
+    padding:25px;
+    border-radius: 6px;
+    width:60vw;
+    opacity:0.7;
+}
+#main1{
+    background:white;
+    display:flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding:15px;
+
+    
+}
+#main2{
+    
+    margin-top:40px;
+    max-height:50vh;
+    overflow:scroll;
+}
+.task{
+    display:flex;
+    justify-content: space-between;
+    background:white;
+    border-radius: 4px;
+    padding:15px;
+    margin-top: 15px;
+
+}
+span{
+    font-weight: bold;
+  color: #000000;
+}
+input{
+    padding:15px;
+    width:60vh;
+    border:1px solid grey;
+
+}
+button{
+    background-color:tomato;
+    opacity:0.8;
+    padding:15px;
+    border:none;
+    border-radius:4px;
+    color:black;
+    font-weight: 20px;
+    width:10vw;
+    font-weight: bold;
+    color: #000000;
+}
+button:hover{
+   opacity:1;
+}
+
+.did{
+    text-decoration: line-through;
+
+}
+
+@media screen and (max-width: 480px){
+    button{ width:100px;}
+    input{  width:200px;}
+}
