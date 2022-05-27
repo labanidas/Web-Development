@@ -16,7 +16,7 @@ app.get("/", (req,res)=>{
 
 //signup route
 app.post("/", (req, res)=>{
-    const { firstname, lastname, email} = req.body;
+    const { firstName, lastName, email} = req.body;
 
 //construct data
     const data = {
@@ -25,8 +25,8 @@ app.post("/", (req, res)=>{
                 email_address: email,
                 status : "subscribed",
                 merge_fields : {
-                    FNAME : firstname,
-                    LNAME : lastname
+                    FNAME : firstName,
+                    LNAME : lastName
                 }
             }
         ]
