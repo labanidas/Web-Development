@@ -16,7 +16,9 @@ app.get("/", (req,res)=>{
 
 //signup route
 app.post("/", (req, res)=>{
-    const { firstName, lastName, email} = req.body;
+    const { fn, ln, email} = req.body;
+
+
 
 //construct data
     const data = {
@@ -25,8 +27,8 @@ app.post("/", (req, res)=>{
                 email_address: email,
                 status : "subscribed",
                 merge_fields : {
-                    FNAME : firstName,
-                    LNAME : lastName
+                    FNAME : fn,
+                    LNAME : ln
                 }
             }
         ]
@@ -44,7 +46,7 @@ const options = {
      body: jsonData
  };
 
- //request to mailchimp
+//  request to mailchimp
 request(options, (err, response, body)=>{
 
     //checking for error
