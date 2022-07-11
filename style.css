@@ -1,0 +1,116 @@
+html,
+      body {
+        position: relative;
+        height: 100%;
+        
+      }
+
+      body {
+        background-color: rgb(247, 222, 0);
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        /* box-sizing: border-box; */
+        width: 100%;
+        height: 100%;
+        /* margin-top: ; */
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        height:80vh;
+        /* margin-top:20px; */
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* this is the important part */
+.swiper-container .swiper-slide {
+    width: auto;
+  }
+
+/* pagination */
+.swiper-pagination{
+    height:100px;
+    background-color:rgb(247, 222, 0);
+    
+}
+/* card */
+.card{
+    padding:2rem;
+    width: 25rem;
+    height:100%;
+    /* margin-right: 10px; */
+   
+}
+.swiper-slide{
+    margin:10px;
+    /* margin-right: 20px; */
+    
+}
+.price{
+    background-color: rgba(171, 182, 212, 0.3);
+    padding: 25px;
+    margin-bottom: 20px;
+
+}
+a{
+    text-decoration: none;
+}
+.know-more{
+    position: absolute;
+    bottom:0px;
+}
+.know-more{
+    margin-left: -20px;
+    margin-bottom: 20px;
+}
+h1{
+    font-size: 3rem;
+}
+hr{
+    color:grey;
+}
+.tag{
+    width: 300px;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    display: block;
+    background-color: rgb(247, 222, 0);
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 20px; 
+    left: -110px;
+}
+
+@media screen and (max-width: 500px){
+    .card .swiper-slide{
+        width:100vw;
+    }
+}
